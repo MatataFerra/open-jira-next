@@ -30,7 +30,6 @@ export const NewEntry: FC = () => {
             multiline
             label="Nueva entrada"
             helperText="Escribe aquí tu nueva entrada"
-            color="secondary"
             error={touched && inputValue.length <= 0}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
@@ -40,17 +39,12 @@ export const NewEntry: FC = () => {
           <Box display="flex" justifyContent="space-between" py={2}>
             <Button
               variant="outlined"
-              color="secondary"
               endIcon={<SaveOutlinedIcon />}
               onClick={onSave}
             >
               Guardar
             </Button>
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={() => setIsAddingEntry(false)}
-            >
+            <Button variant="contained" onClick={() => setIsAddingEntry(false)}>
               Cancelar
             </Button>
           </Box>
@@ -61,7 +55,7 @@ export const NewEntry: FC = () => {
             startIcon={<AddCircleOutlinedIcon />}
             fullWidth
             variant="outlined"
-            color="secondary"
+            color="primary"
             sx={{ height: "100%" }}
             onClick={() => setIsAddingEntry(true)}
           >
